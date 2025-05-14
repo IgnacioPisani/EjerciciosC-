@@ -1,44 +1,41 @@
-// EjerciciosProgramacion.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
-//
-
 #include <iostream>
 #include <string>
 
-void ejercicio1();
-void ejercicio2();
-void ejercicio3();
-void ejercicio4();
-void ejercicio5();
-void ejercicio6();
-void ejercicio7();
-void ejercicio8();
-void ejercicio9();
-void ejercicio10();
-void ejercicio11();
+void Ejercicio1();
+void Ejercicio2();
+void Ejercicio3();
+void Ejercicio4();
+void Ejercicio5();
+void Ejercicio6();
+void Ejercicio7();
+void Ejercicio8();
+void Ejercicio9();
+void Ejercicio10();
+void Ejercicio11();
+
+int SumarDosNumeros(int num1, int num2);
+int CalcularDanio(int atq, int dfs);
+int CalcularDanioLimitado(int atq, int dfs);
+std::string FormatearTiempo(int horas, int minutos);
 
 
-
-int sumarDosNumeros(int num1,int num2);
-int calcularDanio(int atq, int dfs);
-int calcularDanioLimitado(int atq, int dfs);
-std::string formatearTiempo(int horas, int minutos);
 int main()
 {
-	ejercicio1();
-	//ejercicio2();
-	//ejercicio3();
-	//ejercicio4(); 
-	//ejercicio5();
-	//ejercicio6();
-	//ejercicio7();
-	//ejercicio8();
-	//ejercicio9();
-	//ejercicio10();
-	//ejercicio11();
+	Ejercicio1();
+	//Ejercicio2();
+	//Ejercicio3();
+	//Ejercicio4(); 
+	//Ejercicio5();
+	//Ejercicio6();
+	//Ejercicio7();
+	//Ejercicio8();
+	//Ejercicio9();
+	//Ejercicio10();
+	//Ejercicio11();
 	return 0;
 }
 
-void ejercicio1() {
+void Ejercicio1() {
 	int PuntosIniciales = 0;
 	int PuntosGanados = 0;
 	std::cout << "Ingresar los puntos iniciales" << std::endl;
@@ -48,7 +45,7 @@ void ejercicio1() {
 	std::cout << "Total de puntos: " << PuntosIniciales + PuntosGanados;
 }
 
-void ejercicio2() {
+void Ejercicio2() {
 	int VidaActual = 0;
 	int Danio = 0;
 	std::cout << "Ingresar vida actual" << std::endl;
@@ -59,7 +56,7 @@ void ejercicio2() {
 }
 
 
-void ejercicio3() {
+void Ejercicio3() {
 	int VidaActual = 0;
 	int CantCuracion = 0;
 	std::cout << "Ingresar vida actual" << std::endl;
@@ -69,7 +66,7 @@ void ejercicio3() {
 	std::cout << "Total de vida: " << VidaActual + CantCuracion;
 }
 
-void ejercicio4() {
+void Ejercicio4() {
 	int NivelActual = 0;
 	std::cout << "Ingresar Nivel actual" << std::endl;
 	std::cin >> NivelActual;
@@ -77,7 +74,7 @@ void ejercicio4() {
 }
 
 
-void ejercicio5() {
+void Ejercicio5() {
 	int CantMonedas = 0;
 	int Multiplicador = 0;
 	std::cout << "Ingresar cantidad de monedas" << std::endl;
@@ -88,7 +85,7 @@ void ejercicio5() {
 }
 
 
-void ejercicio6() {
+void Ejercicio6() {
 	int CantMonedas = 0;
 	int PrecioObjeto = 0;
 	std::cout << "Ingresar cantidad de monedas" << std::endl;
@@ -98,35 +95,35 @@ void ejercicio6() {
 	std::cout << "Total de monedas: " << CantMonedas - PrecioObjeto;
 }
 
-void ejercicio7() {
+void Ejercicio7() {
 	int Numero1 = 0;
 	int Numero2 = 0;
 	std::cout << "Ingresar numero 1" << std::endl;
 	std::cin >> Numero1;
 	std::cout << "Ingresar numero 2" << std::endl;
 	std::cin >> Numero2;
-	std::cout << "Total: " << sumarDosNumeros(Numero1,Numero2);
+	std::cout << "Total: " << SumarDosNumeros(Numero1, Numero2);
 }
 
-int sumarDosNumeros(int num1, int num2) {
+int SumarDosNumeros(int num1, int num2) {
 	return num1 + num2;
 }
 
-void ejercicio8() {
+void Ejercicio8() {
 	int Ataque = 0;
 	int Defensa = 0;
 	std::cout << "Ingresar Ataque" << std::endl;
 	std::cin >> Ataque;
 	std::cout << "Ingresar Defensa" << std::endl;
 	std::cin >> Defensa;
-	std::cout << "Total: " << calcularDanio(Ataque, Defensa);
+	std::cout << "Total: " << CalcularDanio(Ataque, Defensa);
 }
 
-int calcularDanio(int atq, int dfs) {
+int CalcularDanio(int atq, int dfs) {
 	return atq - dfs;
 }
 
-void ejercicio9() {
+void Ejercicio9() {
 	std::string Nombre = "";
 	int Ataque = 0;
 	int Defensa = 0;
@@ -145,16 +142,16 @@ void ejercicio9() {
 	std::cin >> VidaMaxima;
 	std::cout << "Ingresar Multiplicador Danio" << std::endl;
 	std::cin >> MultiplicadorDanio;
-	std::cout << "Nombre: " << Nombre <<std::endl
-	<< "Ataque: " << Ataque << std::endl
-	<< "Defensa: " << Defensa << std::endl
-	<< "Velocidad de Ataque: " << VelAtaque << std::endl
-	<< "Vida Maxima: " << VidaMaxima << std::endl
-	<< "Multiplicador Danio: " << MultiplicadorDanio << std::endl;
+	std::cout << "Nombre: " << Nombre << std::endl
+		<< "Ataque: " << Ataque << std::endl
+		<< "Defensa: " << Defensa << std::endl
+		<< "Velocidad de Ataque: " << VelAtaque << std::endl
+		<< "Vida Maxima: " << VidaMaxima << std::endl
+		<< "Multiplicador Danio: " << MultiplicadorDanio << std::endl;
 
 }
 
-void ejercicio10() {
+void Ejercicio10() {
 	int MinDia1 = 0;
 	int MinDia2 = 0;
 	int MinDia3 = 0;
@@ -167,20 +164,20 @@ void ejercicio10() {
 	int MinutosTotales = MinDia1 + MinDia2 + MinDia3;
 	int HorasTotales = MinutosTotales / 60;
 	int MinutosRestantesTotales = MinutosTotales % 60;
-	int MinutosPromedio = MinutosTotales /3;
+	int MinutosPromedio = MinutosTotales / 3;
 	int HorasPromedio = MinutosPromedio / 60;
 	int MinutosRestantesPromedio = MinutosPromedio % 60;
-	std::cout << "Total minutos: " << formatearTiempo(HorasTotales, MinutosRestantesTotales) << std::endl
-		<< "Promedio: " << formatearTiempo(HorasPromedio, MinutosRestantesPromedio) << std::endl;
+	std::cout << "Total: " << FormatearTiempo(HorasTotales, MinutosRestantesTotales) << std::endl
+		<< "Promedio: " << FormatearTiempo(HorasPromedio, MinutosRestantesPromedio) << std::endl;
 }
 
-std::string formatearTiempo(int horas, int minutos) {
+std::string FormatearTiempo(int horas, int minutos) {
 	char buffer[6];
 	snprintf(buffer, sizeof(buffer), "%02d:%02d", horas, minutos);
 	return std::string(buffer);
 }
 
-void ejercicio11() {
+void Ejercicio11() {
 	std::string NombreJugador = "";
 	int AtaqueJugador = 0;
 	int DefensaJugador = 0;
@@ -209,13 +206,13 @@ void ejercicio11() {
 	std::cout << "La Vida inicial del Enemigo es: " << VidaEnemigo << std::endl;
 	std::cout << "El jugador ejecuta un ataque..." << std::endl;
 	std::cout << "El enemigo ejecuta un ataque..." << std::endl;
-	VidaEnemigo -= calcularDanioLimitado(AtaqueJugador, DefensaEnemigo);
-	VidaJugador -= calcularDanioLimitado(AtaqueEnemigo, DefensaJugador);
+	VidaEnemigo -= CalcularDanioLimitado(AtaqueJugador, DefensaEnemigo);
+	VidaJugador -= CalcularDanioLimitado(AtaqueEnemigo, DefensaJugador);
 	std::cout << "La Vida final del Jugador es: " << VidaJugador << std::endl;
 	std::cout << "La Vida final del Enemigo es: " << VidaEnemigo << std::endl;
 }
 
-int calcularDanioLimitado(int atq, int dfs) {
-	int Danio = calcularDanio(atq, dfs);
-	return Danio>=0 ? Danio : 0;
+int CalcularDanioLimitado(int atq, int dfs) {
+	int Danio = CalcularDanio(atq, dfs);
+	return Danio >= 0 ? Danio : 0;
 }
